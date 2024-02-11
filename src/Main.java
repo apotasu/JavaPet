@@ -138,7 +138,7 @@ public class Main {
 
     public static boolean estaFalido() {
         if (pet.getMoedas() <= 0) {
-            System.out.println("Você faliu");
+            System.out.println("No final de um longo dia se divertindo com o seu javapet\nVocê decide voltar a sua casa para descansar...\nQuando o onibus chega, você percebe que seu bolso está vaziu...\nParece que você foi irresponsavel com seu dinheiro...\nSem maneira de voltar a sua casa a única coisa em sua mente é o que eu faço agora?...\nVocê faliu!\nFim de jogo!");
             return true;
         } else {
             return false;
