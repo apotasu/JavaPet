@@ -164,19 +164,19 @@ public class Atividades {
         System.out.println("Trabalhos\n1.Restaurante\n2.Academia\n3.Arcade");
         switch (Main.scn.nextInt()) {
             case 1:
-                Main.pet.setDiversao(Main.pet.getDiversao()-5);
+                Main.pet.setDiversao(Main.pet.getDiversao() - 5);
                 Main.pet.setMoedas(Main.pet.getMoedas() + 5);
-                System.out.println("Seu javapet trabalhou no restaurante e ganhou 5 moedas!\nDiversão: "+Main.pet.getDiversao()+ "/100\nMoedas:" + Main.pet.getMoedas());
+                System.out.println("Seu javapet trabalhou no restaurante e ganhou 5 moedas!\nDiversão: " + Main.pet.getDiversao() + "/100\nMoedas:" + Main.pet.getMoedas());
                 break;
             case 2:
-                Main.pet.setDiversao(Main.pet.getDiversao()-10);
+                Main.pet.setDiversao(Main.pet.getDiversao() - 10);
                 Main.pet.setMoedas(Main.pet.getMoedas() + 10);
-                System.out.println("Seu javapet trabalhou na academia e ganhou 10 moedas!\nDiversão: "+Main.pet.getDiversao()+"/100\nMoedas:" + Main.pet.getMoedas());
+                System.out.println("Seu javapet trabalhou na academia e ganhou 10 moedas!\nDiversão: " + Main.pet.getDiversao() + "/100\nMoedas:" + Main.pet.getMoedas());
                 break;
             case 3:
-                Main.pet.setDiversao(Main.pet.getDiversao()-15);
+                Main.pet.setDiversao(Main.pet.getDiversao() - 15);
                 Main.pet.setMoedas(Main.pet.getMoedas() + 15);
-                System.out.println("Seu javapet trabalhou no arcade e ganhou 15 moedas!\nDiversão: "+Main.pet.getDiversao()+"/100\nMoedas:" + Main.pet.getMoedas());
+                System.out.println("Seu javapet trabalhou no arcade e ganhou 15 moedas!\nDiversão: " + Main.pet.getDiversao() + "/100\nMoedas:" + Main.pet.getMoedas());
                 break;
         }
     }

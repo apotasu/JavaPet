@@ -96,11 +96,23 @@ public class Main {
     }
 
     static void importFile() throws IOException {
-        String nomeFile = "feo.txt";
+        System.out.println("Qual o nome do dono associado ao save file?");
+        scn.nextLine();
+        String nomeFile = scn.nextLine() + ".txt";
         File arquivo = new File(nomeFile);
-        scn = new Scanner(arquivo);
-        while (scn.hasNextLine()) {
-
+        Scanner sc = new Scanner(arquivo);
+        String status = arquivo.toString();
+        while (sc.hasNextLine()) {
+            if (!(sc.nextLine() == null)) {
+                pet.setNome(sc.nextLine());
+            } else {
+                pet.setNome(sc.nextLine());
+            }
+            pet.setFisico(sc.nextInt());
+            pet.setFome(sc.nextInt());
+            pet.setHigiene(sc.nextInt());
+            pet.setDiversao(sc.nextInt());
+            pet.setMoedas(sc.nextInt());
         }
     }
 
@@ -112,15 +124,6 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Ocorreu um erro");
             e.printStackTrace();
-        }
-    }
-
-    public static void status(int f) throws IOException {
-        FileReader fileReader = new FileReader("feo.txt");
-        BufferedReader buffReader = new BufferedReader(fileReader);
-        while (buffReader.ready()) {
-            System.out.println(
-                    buffReader.readLine());
         }
     }
 

@@ -135,12 +135,12 @@ public class Pet {
     @Override
     public String toString() {
         return
-                "TipoAnimal: \n'" + TipoAnimal + '\'' +
-                        "\nnome:\n" + nome + '\'' +
-                        "\nfome:\n" + fome +
-                        "\nfisico:\n" + fisico +
-                        "\nhigiene:\n" + higiene +
-                        "\ndiversao:\n" + diversao +
-                        "\nmoedas:\n" + moedas;
+                nome + '\n' +
+                        getTipoAnimal() + '\n' +
+                        fisico + '\n' +
+                        fome + '\n' +
+                        higiene + '\n' +
+                        diversao + '\n' +
+                        moedas;
     }
 }
