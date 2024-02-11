@@ -61,7 +61,11 @@ public class Pet {
     }
 
     public void setFome(int fome) {
-        this.fome = fome;
+        if (fome >= 100) {
+            this.fome = 100;
+        } else {
+            this.fome = fome;
+        }
     }
 
     public int getFisico() {
@@ -69,7 +73,11 @@ public class Pet {
     }
 
     public void setFisico(int fisico) {
-        this.fisico = fisico;
+        if (fisico >= 100) {
+            this.fisico = 100;
+        } else {
+            this.fisico = fisico;
+        }
     }
 
     public int getHigiene() {
@@ -77,7 +85,11 @@ public class Pet {
     }
 
     public void setHigiene(int higiene) {
-        this.higiene = higiene;
+        if (higiene >= 100) {
+            this.higiene = 100;
+        } else {
+            this.higiene = higiene;
+        }
     }
 
     public int getDiversao() {
@@ -85,7 +97,11 @@ public class Pet {
     }
 
     public void setDiversao(int diversao) {
-        this.diversao = diversao;
+        if (diversao >= 100) {
+            this.diversao = 100;
+        } else {
+            this.diversao = diversao;
+        }
     }
 
     public int getMoedas() {

@@ -11,6 +11,9 @@ public class Atividades {
                 System.out.println("Seu javapet comeu a salada e ganhou +15 de alimentação!\nAlimentação: " + Main.pet.getFome() + "/100\nFisico: " + Main.pet.getFisico() + "/100\nMoedas: " + Main.pet.getMoedas());
                 break;
             case 2:
+                if (limit()) {
+                    break;
+                }
 
                 Main.pet.setMoedas(Main.pet.getMoedas() - 15);
                 Main.pet.setFome(Main.pet.getFome() + 20);
@@ -18,7 +21,9 @@ public class Atividades {
                 System.out.println("Seu javapet comeu a carne e ganhou +20 de alimentação!\nAlimentação: " + Main.pet.getFome() + "/100\nFisico: " + Main.pet.getFisico() + "/100\nMoedas: " + Main.pet.getMoedas());
                 break;
             case 3:
-
+                if (limit()) {
+                    break;
+                }
                 Main.pet.setMoedas(Main.pet.getMoedas() - 30);
                 Main.pet.setFome(Main.pet.getFome() + 30);
                 Main.pet.setFisico(Main.pet.getFisico() - 20);
@@ -31,12 +36,18 @@ public class Atividades {
         System.out.println("Academia\n1.Caminhada - $0\n2.Esteira - $10\n3.Levantar peso - $25");
         switch (Main.scn.nextInt()) {
             case 1:
+                if (limit()) {
+                    break;
+                }
                 Main.pet.setHigiene(Main.pet.getHigiene() - 10);
                 Main.pet.setFome(Main.pet.getFome() - 5);
                 Main.pet.setFisico(Main.pet.getFisico() + 20);
                 System.out.println("Seu javapet fez uma caminhada e aumentou seu fisico em +20!\nFisico: " + Main.pet.getFisico() + "/100\nFome: " + Main.pet.getFisico() + "/100\nHigiene: " + Main.pet.getHigiene() + "/100\nMoedas: " + Main.pet.getMoedas());
                 break;
             case 2:
+                if (limit()) {
+                    break;
+                }
                 Main.pet.setMoedas(Main.pet.getMoedas() - 10);
                 Main.pet.setHigiene(Main.pet.getHigiene() - 15);
                 Main.pet.setFome(Main.pet.getFome() - 10);
@@ -44,6 +55,9 @@ public class Atividades {
                 System.out.println("Seu javapet andou na esteira e aumentou seu fisico em +25!\nFisico: " + Main.pet.getFisico() + "/100\nFome: " + Main.pet.getFisico() + "/100\nHigiene: " + Main.pet.getHigiene() + "/100\nMoedas: " + Main.pet.getMoedas());
                 break;
             case 3:
+                if (limit()) {
+                    break;
+                }
                 Main.pet.setMoedas(Main.pet.getMoedas() - 25);
                 Main.pet.setHigiene(Main.pet.getHigiene() - 20);
                 Main.pet.setFome(Main.pet.getFome() - 15);
@@ -58,15 +72,24 @@ public class Atividades {
         System.out.println("Banheiro\n1.Lavar as mãos\n2.Escovar os dentes\n3.Tomar banho");
         switch (Main.scn.nextInt()) {
             case 1:
+                if (limit()) {
+                    break;
+                }
                 Main.pet.setHigiene(Main.pet.getHigiene() + 10);
                 System.out.println("Seu javapet lavou as mãos e melhorou sua higiene em +10!\nHigiene: " + Main.pet.getHigiene());
                 break;
             case 2:
+                if (limit()) {
+                    break;
+                }
                 Main.pet.setHigiene(Main.pet.getHigiene() + 25);
                 System.out.println("Seu javapet escovou seus dentes e melhorou sua higiene em +25!\nHigiene: " + Main.pet.getHigiene());
                 break;
             case 3:
-                Main.pet.setHigiene(Main.pet.getFisico() + 30);
+                if (limit()) {
+                    break;
+                }
+                Main.pet.setHigiene(Main.pet.getHigiene() + 30);
                 System.out.println("Seu javapet tomou banho e melhorou sua higiene em +30!\nHigiene: " + Main.pet.getHigiene());
                 break;
         }
@@ -77,6 +100,9 @@ public class Atividades {
         System.out.println("Arcade\n1.Jogo de corrida - $5\n2.Jogo de luta - $15\n3.Jogo de tiro - $30");
         switch (Main.scn.nextInt()) {
             case 1:
+                if (limit()) {
+                    break;
+                }
                 int JogoCorrida = (int) (Math.random() * 100 + 1);
                 if (JogoCorrida <= 65) {
                     Main.pet.setMoedas(Main.pet.getMoedas() - 5);
@@ -92,6 +118,9 @@ public class Atividades {
                     break;
                 }
             case 2:
+                if (limit()) {
+                    break;
+                }
                 int JogoLuta = (int) (Math.random() * 100 + 1);
                 if (JogoLuta <= 50) {
                     Main.pet.setMoedas(Main.pet.getMoedas() - 15);
@@ -108,6 +137,9 @@ public class Atividades {
                 }
 
             case 3:
+                if (limit()) {
+                    break;
+                }
                 int JogoTiro = (int) (Math.random() * 100 + 1);
                 if (JogoTiro <= 35) {
                     Main.pet.setMoedas(Main.pet.getMoedas() - 30);
@@ -132,20 +164,28 @@ public class Atividades {
         System.out.println("Trabalhos\n1.Restaurante\n2.Academia\n3.Arcade");
         switch (Main.scn.nextInt()) {
             case 1:
-
+                Main.pet.setDiversao(Main.pet.getDiversao()-5);
                 Main.pet.setMoedas(Main.pet.getMoedas() + 5);
-                System.out.println("Seu javapet trabalhou no restaurante por 1 turno e ganhou 5 moedas!\nMoedas:" + Main.pet.getMoedas() + "\nTurnos: ");
+                System.out.println("Seu javapet trabalhou no restaurante e ganhou 5 moedas!\nDiversão: "+Main.pet.getDiversao()+ "/100\nMoedas:" + Main.pet.getMoedas());
                 break;
             case 2:
-
+                Main.pet.setDiversao(Main.pet.getDiversao()-10);
                 Main.pet.setMoedas(Main.pet.getMoedas() + 10);
-                System.out.println("Seu javapet trabalhou na academia por 2 turno e ganhou 10 moedas!\nMoedas:" + Main.pet.getMoedas() + "\nTurnos: ");
+                System.out.println("Seu javapet trabalhou na academia e ganhou 10 moedas!\nDiversão: "+Main.pet.getDiversao()+"/100\nMoedas:" + Main.pet.getMoedas());
                 break;
             case 3:
-
+                Main.pet.setDiversao(Main.pet.getDiversao()-15);
                 Main.pet.setMoedas(Main.pet.getMoedas() + 15);
-                System.out.println("Seu javapet trabalhou no arcade por 3 turno e ganhou 15 moedas!\nMoedas:" + Main.pet.getMoedas() + "\nTurnos: ");
+                System.out.println("Seu javapet trabalhou no arcade e ganhou 15 moedas!\nDiversão: "+Main.pet.getDiversao()+"/100\nMoedas:" + Main.pet.getMoedas());
                 break;
         }
+    }
+
+    public static boolean limit() {
+        if (Main.pet.getFome() >= 100 || Main.pet.getDiversao() >= 100 || Main.pet.getHigiene() >= 100 || Main.pet.getFisico() >= 100) {
+            System.out.println("Seu atributo já está maximizado");
+            return true;
+        }
+        return false;
     }
 }
